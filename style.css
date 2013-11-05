@@ -1,6 +1,10 @@
+body {
+	font-family: sans-serif;
+	font-size: 100%;
+}
+
 div {
   text-align: center;
-  font-family: verdana;
   vertical-align: middle;
   line-height: 100px;
   font-size: 250%;
@@ -21,7 +25,12 @@ ul {
 h1 {
   margin: auto;
   text-align: center;
-  font-family: verdana;
+}
+
+header {
+	width: 500px;
+	text-align: center;
+	margin: auto;
 }
 
 .big-cell > ul {
@@ -44,12 +53,17 @@ h1 {
   background-color: #ecf0f1;
 }
 
-.cell:hover
-{
-  background-color: #1abc9c;
+.x-turn {
+	background-color: #bb8ecd;
+}
+
+.o-turn {
+	background-color: #55a5d9;
 }
 
 .x {
+	text-align: center;
+	line-height: 50px;
     margin: 1px;
     width: 50px;
     height: 50px;
@@ -58,6 +72,8 @@ h1 {
 }
 
 .o {
+	text-align: center;
+	line-height: 50px;
 	margin: 1px;
 	width: 50px;
 	height: 50px;
@@ -68,19 +84,17 @@ h1 {
 .giant-x {
 	font-size: 100px;
 	text-align: center;
-	vertical-align: center;
     margin: 1px;
     width: 156px;
     height: 156px;
     float: left;
-    background-color: #95a5a6;
+    background-color: #9b59b6;
 	
 }
 
 .giant-o {
 	font-size: 100px;
 	text-align: center;
-	vertical-align: center;
     margin: 1px;
     width: 156px;
     height: 156px;

@@ -5,7 +5,6 @@ $(document).ready(function () {
 	
 	TTT.currBoardStr = outsideCell;
 	TTT.currBoardNum = eval(TTT.currBoardStr);
-	console.log(eval(pos));
 	
     if ( _(TTT.possibleBoards).contains(TTT.currBoardStr)) {
     	
@@ -13,9 +12,18 @@ $(document).ready(function () {
 	      $(this)
 	        .removeClass("cell")
 	        .addClass(TTT.player)
-	        .text(TTT.player.toUpperCase());
+	        .html(TTT.player.toUpperCase());
+		  $(this).removeClass(TTT.player + "-turn")	
 	      TTT.move(pos);
 	 	 }
     };
   });
+  
+  $(".cell").hover(
+	  function() {
+	  	$(this).addClass(TTT.player + "-turn")
+  	  }, function() {
+  	  	$(this).removeClass(TTT.player + "-turn")
+  	  } 
+  );
 });

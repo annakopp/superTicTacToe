@@ -94,36 +94,37 @@
 	
     this.placeMark(pos);
 	
+	//if a small board is won:
     if (this.winner(this.bigBoard[this.currBoardNum[0]][this.currBoardNum[1]])) {
-	  $outsideCell.empty();
-	  $outsideCell.html(this.player);
-	  $outsideCell.addClass("giant-" + this.player);
+		$outsideCell.empty();
+	 	$outsideCell.html(this.player);
+	  	$outsideCell.addClass("giant-" + this.player);
 	  
-	  this.bigBoard[this.currBoardNum[0]][this.currBoardNum[1]] = this.player;
-	  if (this.winner(this.bigBoard)) {
-		  alert(this.player + "wins!")
-	      // $('.x').removeClass('x').addClass('cell').text('');
-	      // $('.o').removeClass('o').addClass('cell').text('');
-	      // this.resetBoard();
-	  }
-	  else {
+	  	this.bigBoard[this.currBoardNum[0]][this.currBoardNum[1]] = this.player;
+	  
+	 	if (this.winner(this.bigBoard)) {
+			//if there is a winner of the whole game
+		  	alert(this.player + " wins!")
+		  	location.reload();
+	  	}
+  
+		//remove winning board from list of possible boards
 		this.boardsInPlay.splice(this.boardsInPlay.indexOf(this.currBoardStr),1);
-	  	this.possibleBoards = this.boardsInPlay;
-	  }
-		this.switchPlayer();  
-    } else {
-      this.switchPlayer();
-      this.currBoardStr = strCoords;
-	  this.currBoardNum = eval(this.currBoardStr);
-	  
-      this.possibleBoards = _(this.boardsInPlay).contains(this.currBoardStr) ? [this.currBoardStr] : this.boardsInPlay;
-    }
+    } 
+	
+	this.switchPlayer();
+	this.currBoardStr = strCoords;
+	this.currBoardNum = eval(this.currBoardStr);
+  
+	this.possibleBoards = _(this.boardsInPlay).contains(this.currBoardStr) ? [this.currBoardStr] : this.boardsInPlay;
+
 	_($(".current")).each(function(board){
 		$(board).removeClass("current");
 	})
 	_(this.possibleBoards).each(function(board){
 		$('[data-id="'+ board + '"]').addClass("current");
 	})
+	
     return true;
   };
 

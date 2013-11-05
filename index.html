@@ -6,17 +6,125 @@
   <body>
 
     <h1>Tic Tac Toe</h1>
-    <div class='main'>
-      <div class="cell" id="[0,0]"></div>
-      <div class="cell" id="[0,1]"></div>
-      <div class="cell" id="[0,2]"></div>
-      <div class="cell" id="[1,0]"></div>
-      <div class="cell" id="[1,1]"></div>
-      <div class="cell" id="[1,2]"></div>
-      <div class="cell" id="[2,0]"></div>
-      <div class="cell" id="[2,1]"></div>
-      <div class="cell" id="[2,2]"></div>
-    </div>
+    <ul class='main'>
+      <li class="big-cell 0" data-id="[0,0]">
+		  <ul class="[0,0]">
+		      <li class="cell" data-id="[0,0][0,0]"></li>
+		      <li class="cell" data-id="[0,0][0,1]"></li>
+		      <li class="cell" data-id="[0,0][0,2]"></li>
+		      <li class="cell" data-id="[0,0][1,0]"></li>
+		      <li class="cell" data-id="[0,0][1,1]"></li>
+		      <li class="cell" data-id="[0,0][1,2]"></li>
+		      <li class="cell" data-id="[0,0][2,0]"></li>
+		      <li class="cell" data-id="[0,0][2,1]"></li>
+		      <li class="cell" data-id="[0,0][2,2]"></li>
+		  </ul>
+	  </li>
+      <li class="big-cell 1" data-id="[0,1]">
+		  <ul class="[0,1]">
+		      <li class="cell" data-id="[0,1][0,0]"></li>
+		      <li class="cell" data-id="[0,1][0,1]"></li>
+		      <li class="cell" data-id="[0,1][0,2]"></li>
+		      <li class="cell" data-id="[0,1][1,0]"></li>
+		      <li class="cell" data-id="[0,1][1,1]"></li>
+		      <li class="cell" data-id="[0,1][1,2]"></li>
+		      <li class="cell" data-id="[0,1][2,0]"></li>
+		      <li class="cell" data-id="[0,1][2,1]"></li>
+		      <li class="cell" data-id="[0,1][2,2]"></li>
+		  </ul>
+	  </li>
+      <li class="big-cell 2" data-id="[0,2]">
+		  <ul class="[0,2]">
+		      <li class="cell" data-id="[0,2][0,0]"></li>
+		      <li class="cell" data-id="[0,2][0,1]"></li>
+		      <li class="cell" data-id="[0,2][0,2]"></li>
+		      <li class="cell" data-id="[0,2][1,0]"></li>
+		      <li class="cell" data-id="[0,2][1,1]"></li>
+		      <li class="cell" data-id="[0,2][1,2]"></li>
+		      <li class="cell" data-id="[0,2][2,0]"></li>
+		      <li class="cell" data-id="[0,2][2,1]"></li>
+		      <li class="cell" data-id="[0,2][2,2]"></li>
+		  </ul>
+	  </li>
+      <li class="big-cell 3" data-id="[1,0]">
+		  <ul class="[1,0]">
+		      <li class="cell" data-id="[1,0][0,0]"></li>
+		      <li class="cell" data-id="[1,0][0,1]"></li>
+		      <li class="cell" data-id="[1,0][0,2]"></li>
+		      <li class="cell" data-id="[1,0][1,0]"></li>
+		      <li class="cell" data-id="[1,0][1,1]"></li>
+		      <li class="cell" data-id="[1,0][1,2]"></li>
+		      <li class="cell" data-id="[1,0][2,0]"></li>
+		      <li class="cell" data-id="[1,0][2,1]"></li>
+		      <li class="cell" data-id="[1,0][2,2]"></li>
+		  </ul>
+	  </li>
+      <li class="big-cell 4" data-id="[1,1]">
+		  <ul class="[1,1]">
+		      <li class="cell" data-id="[1,1][0,0]"></li>
+		      <li class="cell" data-id="[1,1][0,1]"></li>
+		      <li class="cell" data-id="[1,1][0,2]"></li>
+		      <li class="cell" data-id="[1,1][1,0]"></li>
+		      <li class="cell" data-id="[1,1][1,1]"></li>
+		      <li class="cell" data-id="[1,1][1,2]"></li>
+		      <li class="cell" data-id="[1,1][2,0]"></li>
+		      <li class="cell" data-id="[1,1][2,1]"></li>
+		      <li class="cell" data-id="[1,1][2,2]"></li>
+		  </ul>
+	  </li>
+      <li class="big-cell 5" data-id="[1,2]">
+		  <ul class="[1,2]">
+		      <li class="cell" data-id="[1,2][0,0]"></li>
+		      <li class="cell" data-id="[1,2][0,1]"></li>
+		      <li class="cell" data-id="[1,2][0,2]"></li>
+		      <li class="cell" data-id="[1,2][1,0]"></li>
+		      <li class="cell" data-id="[1,2][1,1]"></li>
+		      <li class="cell" data-id="[1,2][1,2]"></li>
+		      <li class="cell" data-id="[1,2][2,0]"></li>
+		      <li class="cell" data-id="[1,2][2,1]"></li>
+		      <li class="cell" data-id="[1,2][2,2]"></li>
+		  </ul>
+	  </li>
+      <li class="big-cell 6" data-id="[2,0]">
+		  <ul class="[2,0]">
+		      <li class="cell" data-id="[2,0][0,0]"></li>
+		      <li class="cell" data-id="[2,0][0,1]"></li>
+		      <li class="cell" data-id="[2,0][0,2]"></li>
+		      <li class="cell" data-id="[2,0][1,0]"></li>
+		      <li class="cell" data-id="[2,0][1,1]"></li>
+		      <li class="cell" data-id="[2,0][1,2]"></li>
+		      <li class="cell" data-id="[2,0][2,0]"></li>
+		      <li class="cell" data-id="[2,0][2,1]"></li>
+		      <li class="cell" data-id="[2,0][2,2]"></li>
+		  </ul>
+	  </li>
+      <li class="big-cell 7" data-id="[2,1]">
+		  <ul class="[2,1]">
+		      <li class="cell" data-id="[2,1][0,0]"></li>
+		      <li class="cell" data-id="[2,1][0,1]"></li>
+		      <li class="cell" data-id="[2,1][0,2]"></li>
+		      <li class="cell" data-id="[2,1][1,0]"></li>
+		      <li class="cell" data-id="[2,1][1,1]"></li>
+		      <li class="cell" data-id="[2,1][1,2]"></li>
+		      <li class="cell" data-id="[2,1][2,0]"></li>
+		      <li class="cell" data-id="[2,1][2,1]"></li>
+		      <li class="cell" data-id="[2,1][2,2]"></li>
+		  </ul>
+	  </li>
+      <li class="big-cell 8" data-id="[2,2]">
+		  <ul class="[2,2]">
+		      <li class="cell" data-id="[2,2][0,0]"></li>
+		      <li class="cell" data-id="[2,2][0,1]"></li>
+		      <li class="cell" data-id="[2,2][0,2]"></li>
+		      <li class="cell" data-id="[2,2][1,0]"></li>
+		      <li class="cell" data-id="[2,2][1,1]"></li>
+		      <li class="cell" data-id="[2,2][1,2]"></li>
+		      <li class="cell" data-id="[2,2][2,0]"></li>
+		      <li class="cell" data-id="[2,2][2,1]"></li>
+		      <li class="cell" data-id="[2,2][2,2]"></li>
+		  </ul>
+	  </li>
+    </ul>
 
     <script type="text/javascript" src="jquery-1.9.1.js"></script>
     <script type="text/javascript" src="underscore.js"></script>

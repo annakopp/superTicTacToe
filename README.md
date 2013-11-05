@@ -5,7 +5,7 @@ A variation of Tic Tac Toe written in Javascript/jQuery. Currently this is a loc
 
 Click [here][1] for a live version.
 
-This games is based on instructions found [here][2].
+This game is based on instructions found [here][2].
 
 
   [1]: http://annakopp.com/tictactoe

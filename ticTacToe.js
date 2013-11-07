@@ -83,9 +83,19 @@
     });
   };
 
-  Game.prototype.resetBoard = function () {
-	  //need to add
-  }
+  Game.prototype.tie = function(board) {
+	  var emptyCount = 0
+	  if (this.winner(board)) return false
+	  _(board).each(function(row) {
+		  _(row).each(function(cell){
+			  if (cell === null) emptyCount += 1
+		  })
+	  })
+	  if (emptyCount === 0) {
+		  return true;
+	  }
+	  return false;
+  };
 
   Game.prototype.move = function (strCoords) {
     var pos = eval(strCoords);
@@ -93,6 +103,11 @@
 	var $outsideCell = $('[data-id="'+ this.currBoardStr + '"]');
 	
     this.placeMark(pos);
+	
+	//if small board is tied, remove from play
+	if (this.tie(this.bigBoard[this.currBoardNum[0]][this.currBoardNum[1]])) {
+		this.boardsInPlay.splice(this.boardsInPlay.indexOf(this.currBoardStr),1);
+	};
 	
 	//if a small board is won:
     if (this.winner(this.bigBoard[this.currBoardNum[0]][this.currBoardNum[1]])) {

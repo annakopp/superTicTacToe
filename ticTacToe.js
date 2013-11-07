@@ -125,7 +125,7 @@
   
 		//remove winning board from list of possible boards
 		this.boardsInPlay.splice(this.boardsInPlay.indexOf(this.currBoardStr),1);
-    } 
+    }
 	
 	this.switchPlayer();
 	this.currBoardStr = strCoords;
